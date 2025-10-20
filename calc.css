@@ -6,10 +6,78 @@ body {
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;}
-  
 
+.calc-row.1 {
+  grid-area: calc-row-1;
+}
 
+.calc-row.2 {
+  grid-area: calc-row-2;
+}
+
+.calc-row.3 {
+  grid-area: calc-row-3;
+}
+.calc-row.4 {
+  grid-area: calc-row-4;
+} 
+.calc-row.5 {
+  grid-area: calc-row-5;
+} 
+.calc-row.6 {
+  grid-area: calc-row-6;
+} 
+
+.calc {
+  display: grid;
+  grid-template-areas: 
+    "calc-row-1 calc-row-1 calc-row-1 calc-row-1";
+    "calc-row-2 calc-row-2 calc-row-2 calc-row-2";
+    "calc-row-3 calc-row-3 calc-row-3 calc-row-3";
+    "calc-row-4 calc-row-4 calc-row-4 calc-row-4";
+    "calc-row-5 calc-row-5 calc-row-5 calc-row-5";
+    "calc-row-6 calc-row-6 calc-row-6 calc-row-6";
+  gap: 10px;
+}
+
+.calc-row-1{
+  justify-content: right;
+  align-items: right;
+  width: 400px;
+  height: 24px;
+  background-color: black;
+  color: white;
+}
+
+.result {
+  color: white
+  text-align: right;
+  font: monospace, Courier
+  font-size: 32px;
+  padding: 5px;
+}
+
+.key {
+  width: 80px;
+  height: 80px;
+  margin: 5px;
+  font-size: 24px;
+  border: none;
+  border-radius: 0;
+  background-color: #e0e0e0;
+  cursor: pointer;
+}
+
+.big {
+  width: 175px;
+  height: 80px;
+}
+
+.bigger {
+  width: 270px;
+  height: 80px;
+}
