@@ -42,23 +42,35 @@ body {
     "calc-row-5 calc-row-5 calc-row-5 calc-row-5";
     "calc-row-6 calc-row-6 calc-row-6 calc-row-6";
   gap: 10px;
+  row-gap: 2px;
+  column-gap: 2px;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(6, 80px);
+  
 }
 
-.calc-row-1{
+.grid {
+  display: grid;
+  row-gap: 2px;
+  column-gap: 2px;
+}
+.calc-row-1 {
   justify-content: right;
   align-items: right;
   width: 400px;
-  height: 24px;
+  height: 50px;
   background-color: black;
   color: white;
+  padding: 20px;
 }
 
 .result {
-  color: white
+  color: white;
   text-align: right;
-  font: monospace, Courier
+  font: monospace, Courier;
   font-size: 32px;
-  padding: 5px;
+  padding: 20px;
+  width: 360px;
 }
 
 .key {
@@ -67,9 +79,10 @@ body {
   margin: 5px;
   font-size: 24px;
   border: none;
-  border-radius: 0;
+  border-radius: 0px;
   background-color: #e0e0e0;
   cursor: pointer;
+  font: monospace, Courier;
 }
 
 .big {
