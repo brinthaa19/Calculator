@@ -1,4 +1,4 @@
-* {box sizing: border-box;
+*{box-sizing: border-box;
 }
 
 body {
@@ -6,63 +6,41 @@ body {
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;}
-
-.calc-row.1 {
-  grid-area: calc-row-1;
+  display: flex;
+  justify-content: left;
+  align-items: right;
+  height: 100vh;
+  width: 100%;
 }
 
-.calc-row.2 {
-  grid-area: calc-row-2;
-}
-
-.calc-row.3 {
-  grid-area: calc-row-3;
-}
-.calc-row.4 {
-  grid-area: calc-row-4;
-} 
-.calc-row.5 {
-  grid-area: calc-row-5;
-} 
-.calc-row.6 {
-  grid-area: calc-row-6;
-} 
 
 .calc {
   display: grid;
   grid-template-areas: 
-    "calc-row-1 calc-row-1 calc-row-1 calc-row-1";
-    "calc-row-2 calc-row-2 calc-row-2 calc-row-2";
-    "calc-row-3 calc-row-3 calc-row-3 calc-row-3";
-    "calc-row-4 calc-row-4 calc-row-4 calc-row-4";
-    "calc-row-5 calc-row-5 calc-row-5 calc-row-5";
-    "calc-row-6 calc-row-6 calc-row-6 calc-row-6";
-  gap: 10px;
-  row-gap: 2px;
-  column-gap: 2px;
-  grid-template-columns: repeat(4, 80px);
-  grid-template-rows: repeat(6, 80px);
+    "C C DEL /"
+    "7 8 9 *"
+    "4 5 6 -"
+    "1 2 3 +"
+    "zero zero zero = "; 
+    height: 400px;
+    width: 400px;
+    text-align: right;
   
 }
 
-.grid {
-  display: grid;
-  row-gap: 2px;
-  column-gap: 2px;
-}
 .calc-row-1 {
-  justify-content: right;
-  align-items: right;
-  width: 400px;
-  height: 50px;
   background-color: black;
   color: white;
-  padding: 20px;
+  display: flex;
+  align-content: stretch;
+  width: 98%
+
 }
+
+.calc-row-2, .calc-row-3, .calc-row-4, .calc-row-5, .calc-row-6 {
+ display: flex;
+ align-content: stretch;
+ width: 100%;}
 
 .result {
   color: white;
@@ -70,27 +48,51 @@ body {
   font: monospace, Courier;
   font-size: 32px;
   padding: 20px;
-  width: 360px;
+  height: 100px;
 }
 
 .key {
-  width: 80px;
-  height: 80px;
-  margin: 5px;
-  font-size: 24px;
-  border: none;
-  border-radius: 0px;
-  background-color: #e0e0e0;
+ 
+  font-size: 40px;
+  background-color: #d8d9db;
   cursor: pointer;
   font: monospace, Courier;
+  height: 100px;
+  width: 24.5%;
+
 }
 
+.C {
+  grid-template-columns: 2fr 1fr 1fr;
+}
+.zero {
+  grid-template-columns: 3fr 1fr; }
+
+
+
+  .C-grey {
+    grid-area: C;
+    width: 95%;
+    background-color: #d8d9db;
+    font-size: 40px;
+    font: monospace, Courier;
+  }
+
+  .key:last-child {
+  background-color: #dd8d37;
+  color: white;
+}
+ .key:hover {
+  background-color: #ebebeb;
+ }
+
+ .key:active {
+  background-color: #bbbcbe;
+}
 .big {
-  width: 175px;
-  height: 80px;
+  width: 49%;
 }
 
-.bigger {
-  width: 270px;
-  height: 80px;
+.bigger{
+  width: 73.5%;
 }
